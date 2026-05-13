@@ -4,7 +4,7 @@ import aboutImg from '../assets/about.png';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-dark">
+    <section id="about" className="py-24 bg-white dark:bg-dark transition-colors duration-300 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -13,7 +13,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/5">
             <img src={aboutImg} alt="About Me" className="w-full h-full object-cover" />
           </div>
           {/* Decorative Background */}
@@ -27,10 +27,10 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-slate-900 dark:text-white">
             About <span className="text-primary">Me</span>
           </h2>
-          <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
+          <div className="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
             <p>
               I'm a passionate Full Stack Developer who loves building real-world products that solve problems and create impact. 
               I enjoy working with modern technologies and delivering clean, efficient, and scalable solutions.
