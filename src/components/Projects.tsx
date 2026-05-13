@@ -34,14 +34,14 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-dark-surface/20 transition-colors duration-300 scroll-mt-20">
+    <section id="projects" className="py-24 bg-dark-surface/20 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
               Featured <span className="text-primary">Projects</span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-lg">
+            <p className="text-slate-400 max-w-lg">
               Here are some of my recent works that demonstrate my skills in full-stack development and problem-solving.
             </p>
           </div>
@@ -84,17 +84,17 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-white/5">
-                   <a href={project.demo} className="text-slate-900 dark:text-white text-sm font-semibold flex items-center gap-2 hover:text-primary transition-colors">
+                <div className="flex items-center gap-4 pt-4 border-t border-white/5">
+                   <a href={project.demo} className="text-white text-sm font-semibold flex items-center gap-2 hover:text-primary transition-colors">
                      <ExternalLink size={16} /> Live Demo
                    </a>
-                   <a href={project.github} className="text-slate-900 dark:text-white text-sm font-semibold flex items-center gap-2 hover:text-primary transition-colors">
+                   <a href={project.github} className="text-white text-sm font-semibold flex items-center gap-2 hover:text-primary transition-colors">
                      <FaGithub size={16} /> Source Code
                    </a>
                 </div>

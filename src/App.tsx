@@ -8,29 +8,12 @@ import Projects from './components/Projects';
 import Stats from './components/Stats';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-  const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('theme');
-    return saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
-
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => setIsDark(!isDark);
-
   return (
-    <div className="min-h-screen transition-colors duration-300">
-      <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+    <div className="min-h-screen">
+      <Navbar />
       <main>
         <Hero />
         <About />

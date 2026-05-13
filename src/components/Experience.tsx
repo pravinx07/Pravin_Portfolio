@@ -25,7 +25,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-slate-50/50 dark:bg-dark-surface/30 transition-colors duration-300 scroll-mt-20">
+    <section id="experience" className="py-24 bg-dark-surface/30 scroll-mt-20">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="section-title">Work <span>Experience</span></h2>
         
@@ -40,12 +40,12 @@ const Experience = () => {
               className="relative pl-8 md:pl-12"
             >
               {/* Dot */}
-              <div className="absolute top-0 -left-[11px] w-5 h-5 rounded-full bg-white dark:bg-dark border-2 border-primary z-10"></div>
+              <div className="absolute top-0 -left-[11px] w-5 h-5 rounded-full bg-dark border-2 border-primary z-10"></div>
               
               <div className="glass p-6 md:p-8 rounded-2xl hover:border-primary/40 transition-colors group">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors flex items-center gap-2">
                       <Briefcase size={20} className="text-primary" /> {exp.company}
                     </h3>
                     <p className="text-primary/80 font-medium">{exp.role}</p>
@@ -54,7 +54,7 @@ const Experience = () => {
                     {exp.period}
                   </span>
                 </div>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-slate-400 leading-relaxed">
                   {exp.description}
                 </p>
               </div>
