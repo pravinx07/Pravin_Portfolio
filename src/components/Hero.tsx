@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-16 w-full">
         <motion.div 
           className="order-2 lg:order-1"
@@ -14,13 +14,13 @@ const Hero = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h4 className="text-xl md:text-2xl font-medium mb-4 text-slate-100">
+          <h4 className="text-xl md:text-2xl font-medium mb-4 text-slate-700 dark:text-slate-100">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold">Pravin Shegamwar</span>
           </h4>
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight text-white">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight text-slate-900 dark:text-white">
             Full Stack <br /> Developer
           </h1>
-          <p className="text-lg text-slate-400 max-w-xl mb-10 leading-relaxed">
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-10 leading-relaxed">
             I build scalable web applications with modern technologies and DevOps practices. 
             Currently interning at Willovate Pvt Ltd, specializing in .NET, React, and PostgreSQL.
           </p>
@@ -46,7 +46,7 @@ const Hero = () => {
                 href={social.href} 
                 target="_blank" 
                 rel="noreferrer" 
-                className="w-12 h-12 rounded-full flex items-center justify-center bg-dark-surface border border-white/5 text-slate-400 hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xl"
+                className="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 dark:bg-dark-surface border border-slate-200 dark:border-white/5 text-slate-500 dark:text-slate-400 hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xl"
               >
                 <social.icon size={22} />
               </a>
@@ -65,7 +65,7 @@ const Hero = () => {
             {/* Animated Blob Background */}
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-[2.5rem] blur-3xl animate-blob"></div>
             
-            <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl z-10">
+            <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl z-10">
               <img 
                 src={profileImg} 
                 alt="Pravin Shegamwar" 

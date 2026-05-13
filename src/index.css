@@ -4,15 +4,27 @@
 
 @layer base {
   :root {
+    --bg-color: #ffffff;
+    --surface-color: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+  }
+
+  .dark {
     --bg-color: #030712;
     --surface-color: #0f172a;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
   }
 
-  body {
-    @apply bg-dark text-slate-50 font-main antialiased;
+  html {
     scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 dark:bg-dark dark:text-slate-50 font-main antialiased transition-colors duration-300;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -30,15 +42,15 @@
   }
   
   .btn-outline {
-    @apply border border-white/10 text-white hover:bg-dark-lighter hover:-translate-y-0.5 hover:border-primary;
+    @apply border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white hover:bg-slate-100 dark:hover:bg-dark-lighter hover:-translate-y-0.5 hover:border-primary;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl mb-12 text-center bg-gradient-to-r from-slate-50 to-slate-400 bg-clip-text text-transparent;
+    @apply text-4xl md:text-5xl mb-12 text-center bg-gradient-to-r from-slate-900 to-slate-500 dark:from-slate-50 dark:to-slate-400 bg-clip-text text-transparent;
   }
 
   .glass {
-    @apply bg-dark-surface/60 backdrop-blur-xl border border-white/5;
+    @apply bg-white/60 dark:bg-dark-surface/60 backdrop-blur-xl border border-slate-200 dark:border-white/5;
   }
 }
 
@@ -48,11 +60,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #030712;
+  @apply bg-slate-100 dark:bg-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  @apply bg-slate-300 dark:bg-dark-lighter;
   border-radius: 10px;
 }
 
