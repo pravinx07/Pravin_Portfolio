@@ -4,27 +4,22 @@
 
 @layer base {
   :root {
-    --bg-color: #ffffff;
-    --surface-color: #f1f5f9;
-    --text-primary: #0f172a;
-    --text-secondary: #64748b;
-    --primary: #8b5cf6;
-    --primary-hover: #7c3aed;
-  }
-
-  .dark {
     --bg-color: #030712;
     --surface-color: #0f172a;
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
   }
 
   html {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white text-slate-900 dark:bg-dark dark:text-slate-50 font-main antialiased transition-colors duration-300;
+    @apply bg-dark text-slate-50 font-main antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {

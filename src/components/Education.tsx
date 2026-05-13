@@ -17,7 +17,7 @@ const education = [
 
 const Education = () => {
   return (
-    <section className="py-24 bg-slate-50/30 dark:bg-dark-surface/10 transition-colors duration-300">
+    <section className="py-24 bg-dark-surface/10 scroll-mt-20">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="section-title">Edu<span>cation</span></h2>
         
@@ -36,14 +36,14 @@ const Education = () => {
               </div>
               <div className="flex-grow">
                 <div className="flex flex-col md:flex-row justify-between md:items-center mb-2 gap-2">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
                     {edu.degree}
                   </h3>
                   <span className="text-sm font-medium text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
                     {edu.period}
                   </span>
                 </div>
-                <p className="text-slate-600 dark:text-slate-400">{edu.school}</p>
+                <p className="text-slate-400">{edu.school}</p>
               </div>
             </motion.div>
           ))}
