@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ background: '#040d17' }}>
       <Navbar />
       <main>
         <Hero />
@@ -24,9 +24,13 @@ function App() {
         <Education />
         <Contact />
       </main>
-      <footer className="py-12 border-t border-white/5 text-center text-slate-500">
-        <div className="container">
-          <p>© {new Date().getFullYear()} Pravin Shegamwar. All rights reserved.</p>
+      <footer className="py-10 text-center" style={{ borderTop: '1px solid rgba(34,211,238,0.08)', background: '#040d17' }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-sm" style={{ color: '#475569' }}>
+            Designed & Built by{' '}
+            <span style={{ color: '#22d3ee', fontWeight: 600 }}>Pravin Shegamwar</span>
+            {' '}· © {new Date().getFullYear()}
+          </p>
         </div>
       </footer>
     </div>
