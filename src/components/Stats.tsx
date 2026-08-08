@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
+import { Rocket, BookOpen, Cpu, Flame } from 'lucide-react';
 
 const stats = [
-  { label: 'Projects Completed', value: '10+', icon: '🚀' },
-  { label: 'Years of Learning', value: '2+', icon: '📚' },
-  { label: 'Technologies', value: '15+', icon: '⚙️' },
-  { label: 'Dedication', value: '100%', icon: '🔥' },
+  { label: 'Projects Completed', value: '10+', icon: Rocket, color: '#22d3ee' },
+  { label: 'Years of Learning', value: '2+', icon: BookOpen, color: '#818cf8' },
+  { label: 'Technologies', value: '15+', icon: Cpu, color: '#34d399' },
+  { label: 'Dedication', value: '100%', icon: Flame, color: '#f59e0b' },
 ];
 
 const Stats = () => {
@@ -19,7 +20,7 @@ const Stats = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, type: 'spring', stiffness: 100 }}
-              className="relative text-center p-8 rounded-2xl overflow-hidden group cursor-default"
+              className="relative text-center p-8 rounded-2xl overflow-hidden group cursor-default flex flex-col items-center"
               style={{
                 background: 'rgba(7,18,32,0.8)',
                 border: '1px solid rgba(34,211,238,0.1)',
@@ -38,9 +39,11 @@ const Stats = () => {
             >
               {/* Top accent line */}
               <div className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ background: 'linear-gradient(90deg, #22d3ee, #818cf8)' }} />
+                style={{ background: `linear-gradient(90deg, ${stat.color}, transparent)` }} />
 
-              <div className="text-3xl mb-3">{stat.icon}</div>
+              <div className="mb-4">
+                <stat.icon size={32} style={{ color: stat.color }} />
+              </div>
               <h3 className="text-4xl md:text-5xl font-heading font-black mb-2 gradient-text">
                 {stat.value}
               </h3>

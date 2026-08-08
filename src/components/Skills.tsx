@@ -1,39 +1,40 @@
 import { motion } from 'framer-motion';
+import { Terminal, Layout, Server, Database, Wrench, Network } from 'lucide-react';
 
 const skillCategories = [
   {
     title: "Languages",
-    icon: "💻",
+    icon: Terminal,
     color: '#f59e0b',
     skills: ["C#", "JavaScript", "TypeScript", "Python"]
   },
   {
     title: "Frontend",
-    icon: "🎨",
+    icon: Layout,
     color: '#22d3ee',
     skills: ["React.js", "Next.js", "HTML", "CSS", "Tailwind CSS"]
   },
   {
     title: "Backend",
-    icon: "⚙️",
+    icon: Server,
     color: '#818cf8',
     skills: [".NET", "ASP.NET Core", "Node.js", "Express.js", "REST APIs"]
   },
   {
     title: "Databases & ORMs",
-    icon: "🗄️",
+    icon: Database,
     color: '#34d399',
     skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "Entity Framework Core"]
   },
   {
     title: "DevOps & Tools",
-    icon: "🛠️",
+    icon: Wrench,
     color: '#f43f5e',
     skills: ["Git","AWS","GitHub Actions","Shell Scripting","Docker", "Linux", "Azure", "CI/CD"]
   },
   {
     title: "System Design & Arch",
-    icon: "🏗️",
+    icon: Network,
     color: '#a855f7',
     skills: ["Microservices", "MVC Architecture", "Clean Architecture", "WebSockets", "Authentication", "OOP"]
   }
@@ -72,9 +73,9 @@ const Skills = () => {
                 (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
               }}
             >
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5"
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
                 style={{ background: `${cat.color}15`, border: `1px solid ${cat.color}30` }}>
-                {cat.icon}
+                <cat.icon size={22} style={{ color: cat.color }} />
               </div>
               <h3 className="text-lg font-bold mb-5" style={{ color: cat.color }}>
                 {cat.title}

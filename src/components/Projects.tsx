@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
+import orangecitygoImg from '../assets/orangecitygo.png';
+import gymImg from '../assets/gym.png';
+import studioImg from '../assets/studio.png';
+import staffpayImg from '../assets/staffpay.png';
 
 const projects = [
   {
@@ -15,13 +19,45 @@ const projects = [
     accent: '#22d3ee'
   },
   {
-    title: 'Willovate Restro',
+    title: 'OrangeCityGo',
+    description: "Nagpur's favourite food delivery platform. Features a seamless checkout process, digital wallet integration, real-time order tracking, and restaurant discovery.",
+    tags: ['.NET Core', 'React', 'PostgreSQL', 'Azure'],
+    image: orangecitygoImg,
+    demo: 'https://orangecitygo.willovate.in/',
+    accent: '#f97316'
+  },
+  {
+    title: 'StaffPay',
+    description: 'The complete payroll and workforce operating system. Automates salary disbursals, biometric attendance, tax compliance (PF/ESI/TDS), and WhatsApp payslips.',
+    tags: ['.NET Core', 'React', 'Azure', 'Biometrics'],
+    image: staffpayImg,
+    demo: 'https://wpeople.willovate.in/',
+    accent: '#14b8a6'
+  },
+  {
+    title: 'Willovate Studio',
+    description: 'Integrated marketing platform for WhatsApp, email, and SMS. Manage projects, collaborate with teams, and deliver professional content seamlessly.',
+    tags: ['.NET Core', 'React', 'WhatsApp API', 'Azure'],
+    image: studioImg,
+    demo: 'https://studio.willovate.in/',
+    accent: '#6366f1'
+  },
+  {
+    title: 'Willovate Gym',
+    description: 'All-in-one smart gym management platform. Includes member management, class scheduling, trainer workflows, attendance tracking, and powerful analytics.',
+    tags: ['.NET Core', 'React', 'PostgreSQL', 'Azure'],
+    image: gymImg,
+    demo: 'https://gym.willovate.in/',
+    accent: '#f97316'
+  },
+  {
+    title: 'Willovate Resto',
     description: 'Restaurant management system with real-time orders, KOT management, and detailed analytics dashboard.',
     tags: ['.NET Core', 'React', 'Azure', 'SQL Server'],
     image: project2,
     demo: 'https://resto.willovate.in/',
     accent: '#818cf8'
-  },
+  }
 ];
 
 const Projects = () => {
@@ -44,7 +80,9 @@ const Projects = () => {
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
           >
             View All on GitHub
-            <motion.span animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>→</motion.span>
+            <motion.span animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
+              <ArrowRight size={16} />
+            </motion.span>
           </a>
         </div>
 
@@ -76,7 +114,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4"
                   style={{ background: 'rgba(4,13,23,0.75)', backdropFilter: 'blur(4px)' }}>
