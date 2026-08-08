@@ -4,21 +4,20 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#8b5cf6',
-          hover: '#7c3aed',
+          DEFAULT: '#22d3ee',
+          hover: '#06b6d4',
         },
         secondary: {
-          DEFAULT: '#d946ef',
+          DEFAULT: '#818cf8',
         },
         dark: {
-          DEFAULT: '#030712',
-          surface: '#0f172a',
-          lighter: '#1e293b',
+          DEFAULT: '#040d17',
+          surface: '#071220',
+          lighter: '#0c1e33',
         }
       },
       fontFamily: {
@@ -26,12 +25,19 @@ export default {
         heading: ['Outfit', 'sans-serif'],
       },
       animation: {
-        'blob': 'blob 10s infinite alternate',
+        'blob': 'blob 12s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s ease-in-out infinite',
       },
       keyframes: {
         blob: {
-          '0%': { transform: 'scale(1) translate(0, 0)' },
-          '100%': { transform: 'scale(1.1) translate(20px, 20px)' },
+          '0%, 100%': { transform: 'scale(1) translate(0, 0)' },
+          '33%':  { transform: 'scale(1.05) translate(15px, -10px)' },
+          '66%':  { transform: 'scale(0.95) translate(-10px, 15px)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
         }
       }
     },
