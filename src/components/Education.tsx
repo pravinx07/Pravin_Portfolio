@@ -6,6 +6,7 @@ const education = [
     degree: 'Bachelor of Technology (IT)',
     school: 'Dr. Babasaheb Ambedkar Technological University Lonare',
     period: '2022 – 2026',
+    cgpa: 'CGPA: 8.77'
   },
   {
     degree: 'Higher Secondary (12th)',
@@ -72,6 +73,9 @@ const Education = () => {
                   </span>
                 </div>
                 <p style={{ color: '#8ba3bf' }}>{edu.school}</p>
+                {edu.cgpa && (
+                  <p className="mt-1 text-sm font-semibold" style={{ color: '#34d399' }}>{edu.cgpa}</p>
+                )}
               </div>
             </motion.div>
           ))}

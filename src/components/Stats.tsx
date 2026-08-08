@@ -11,7 +11,7 @@ const Stats = () => {
   return (
     <section className="py-20" style={{ background: '#040d17' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <motion.div
               key={i}
@@ -44,7 +44,7 @@ const Stats = () => {
               <h3 className="text-4xl md:text-5xl font-heading font-black mb-2 gradient-text">
                 {stat.value}
               </h3>
-              <p className="text-sm font-medium" style={{ color: '#64748b' }}>{stat.label}</p>
+              <p className="text-sm font-medium" style={{ color: '#94a3b8' }}>{stat.label}</p>
             </motion.div>
           ))}
         </div>

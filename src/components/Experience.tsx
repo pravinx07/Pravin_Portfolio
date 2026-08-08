@@ -3,25 +3,18 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'Willovate Pvt Ltd',
-    role: 'Associate Software Engineer Intern',
-    period: 'Current',
-    description: 'Working on .NET backend, React frontend, and PostgreSQL database. Managing cloud infrastructure on Azure. Building scalable microservices and real-time features.',
-    tags: ['.NET Core', 'React', 'PostgreSQL', 'Azure']
+    company: 'Willovate Private Limited',
+    role: 'Associate Software Engineer',
+    period: 'Dec 2025 – Present',
+    description: 'Developed production-grade modules for Willovate Resto and independently built Willovate Studio (a WhatsApp marketing platform). Implemented real-time inventory, POS workflows, reservation systems, WhatsApp template workflows with Meta approval, and campaign analytics dashboards.',
+    tags: ['.NET', 'React.js', 'PostgreSQL', 'MVC Architecture', 'REST APIs']
   },
   {
-    company: 'Freelance / Projects',
+    company: 'Freelance & Open Source',
     role: 'Full Stack Developer',
     period: '2023 – 2024',
-    description: 'Developed various web applications using MERN stack and Next.js. Focused on performance optimization and delivering production-ready products for clients.',
-    tags: ['React', 'Node.js', 'Next.js', 'MongoDB']
-  },
-  {
-    company: 'Self-Learning & Open Source',
-    role: 'Contributor',
-    period: '2022 – 2023',
-    description: 'Contributing to open-source projects and building personal portfolio projects to master modern tech stacks, DevOps, and cloud-native development.',
-    tags: ['Git', 'Docker', 'Linux', 'CI/CD']
+    description: 'Developed scalable full-stack web applications and contributed to open-source projects. Mastered modern tech stacks, OOP, Data Structures, and Algorithms.',
+    tags: ['Node.js', 'Next.js', 'Docker', 'System Design']
   }
 ];
 

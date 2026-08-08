@@ -3,16 +3,15 @@ import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
-import project3 from '../assets/project3.png';
 
 const projects = [
   {
-    title: 'Merge — Social Platform',
-    description: 'A social platform for developers to connect, match, and chat. Features real-time communication and skill matching.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
+    title: 'Merge — Developer Collaboration Platform',
+    description: 'Built a full-stack platform with developer matching, real-time messaging, gig marketplace, and an AI-powered assessment engine that awards verified skill badges. Includes secure Razorpay payment integration.',
+    tags: ['React.js', 'Node.js', 'PostgreSQL', 'Prisma ORM', 'Socket.io', 'Razorpay'],
     image: project1,
-    github: 'https://github.com/pravinX07',
-    demo: 'https://demo.com',
+    github: 'https://github.com/pravinx07/Merge_backend',
+    demo: 'https://merge-frontend-six.vercel.app/',
     accent: '#22d3ee'
   },
   {
@@ -20,26 +19,16 @@ const projects = [
     description: 'Restaurant management system with real-time orders, KOT management, and detailed analytics dashboard.',
     tags: ['.NET Core', 'React', 'Azure', 'SQL Server'],
     image: project2,
-    github: 'https://github.com/pravinX07',
-    demo: 'https://demo.com',
+    demo: 'https://resto.willovate.in/',
     accent: '#818cf8'
   },
-  {
-    title: 'LiveTranscribedAI',
-    description: 'Real-time subtitle video calling platform using WebRTC and AI transcription services powered by OpenAI.',
-    tags: ['Next.js', 'WebRTC', 'OpenAI', 'Tailwind'],
-    image: project3,
-    github: 'https://github.com/pravinX07',
-    demo: 'https://demo.com',
-    accent: '#34d399'
-  }
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="py-24 scroll-mt-20" style={{ background: '#040d17' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-14 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 gap-6">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: '#22d3ee' }}>
               — What I've Built
@@ -91,30 +80,34 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4"
                   style={{ background: 'rgba(4,13,23,0.75)', backdropFilter: 'blur(4px)' }}>
-                  <a href={project.github} target="_blank" rel="noreferrer"
-                    className="w-12 h-12 rounded-xl flex items-center justify-center font-bold transition-all duration-200"
-                    style={{ background: '#e2e8f0', color: '#040d17' }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLElement).style.background = project.accent;
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLElement).style.background = '#e2e8f0';
-                    }}
-                  >
-                    <FaGithub size={20} />
-                  </a>
-                  <a href={project.demo} target="_blank" rel="noreferrer"
-                    className="w-12 h-12 rounded-xl flex items-center justify-center font-bold transition-all duration-200"
-                    style={{ background: '#e2e8f0', color: '#040d17' }}
-                    onMouseEnter={e => {
-                      (e.currentTarget as HTMLElement).style.background = project.accent;
-                    }}
-                    onMouseLeave={e => {
-                      (e.currentTarget as HTMLElement).style.background = '#e2e8f0';
-                    }}
-                  >
-                    <ExternalLink size={20} />
-                  </a>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noreferrer"
+                      className="w-12 h-12 rounded-xl flex items-center justify-center font-bold transition-all duration-200"
+                      style={{ background: '#e2e8f0', color: '#040d17' }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.background = project.accent;
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.background = '#e2e8f0';
+                      }}
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noreferrer"
+                      className="w-12 h-12 rounded-xl flex items-center justify-center font-bold transition-all duration-200"
+                      style={{ background: '#e2e8f0', color: '#040d17' }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLElement).style.background = project.accent;
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLElement).style.background = '#e2e8f0';
+                      }}
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
                 {/* Gradient overlay at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-16"
@@ -145,20 +138,24 @@ const Projects = () => {
                 </p>
 
                 <div className="flex items-center gap-6 mt-6 pt-5" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                  <a href={project.demo} className="text-sm font-semibold flex items-center gap-1.5 transition-colors"
-                    style={{ color: project.accent }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '0.7'}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
-                  >
-                    <ExternalLink size={15} /> Live Demo
-                  </a>
-                  <a href={project.github} className="text-sm font-semibold flex items-center gap-1.5 transition-colors"
-                    style={{ color: '#64748b' }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#e2e8f0'}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = '#64748b'}
-                  >
-                    <FaGithub size={15} /> Source Code
-                  </a>
+                  {project.demo && (
+                    <a href={project.demo} className="text-sm font-semibold flex items-center gap-1.5 transition-colors"
+                      style={{ color: project.accent }}
+                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = '0.7'}
+                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
+                    >
+                      <ExternalLink size={15} /> Live Demo
+                    </a>
+                  )}
+                  {project.github && (
+                    <a href={project.github} className="text-sm font-semibold flex items-center gap-1.5 transition-colors"
+                      style={{ color: '#64748b' }}
+                      onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = '#e2e8f0'}
+                      onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = '#64748b'}
+                    >
+                      <FaGithub size={15} /> Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

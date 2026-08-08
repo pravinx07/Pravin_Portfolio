@@ -8,7 +8,6 @@ import Projects from './components/Projects';
 import Stats from './components/Stats';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import { useEffect } from 'react';
 
 function App() {
   return (

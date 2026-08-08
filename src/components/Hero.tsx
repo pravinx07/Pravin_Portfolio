@@ -1,6 +1,7 @@
 import { Mail, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import profileImg from '../assets/pravin.jpg';
+import resumePdf from '../assets/Pravin_Shegamwar_Resume.pdf';
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-16 w-full">
         <motion.div
-          className="order-2 lg:order-1"
+          className="order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -39,16 +40,16 @@ const Hero = () => {
             Currently interning at <span style={{ color: '#22d3ee', fontWeight: 600 }}>Willovate Pvt Ltd</span>, specializing in .NET, React, and PostgreSQL.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
-            <a href="/Pravin_Shegamwar_Resume.pdf" download="Pravin_Shegamwar_Resume.pdf" className="btn btn-primary">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">
+            <a href={resumePdf} download="Pravin_Shegamwar_Resume.pdf" className="btn btn-primary w-full sm:w-auto justify-center">
               <Download size={20} /> Download Resume
             </a>
-            <a href="#contact" className="btn btn-outline">
+            <a href="#contact" className="btn btn-outline w-full sm:w-auto justify-center">
               Contact Me
             </a>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex justify-center lg:justify-start gap-4">
             {[
               { icon: FaGithub, href: 'https://github.com/pravinX07', label: 'GitHub' },
               { icon: FaLinkedin, href: 'https://www.linkedin.com/in/pravins07/', label: 'LinkedIn' },
@@ -87,13 +88,13 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="order-1 lg:order-2 flex justify-center"
+          className="order-1 lg:order-2 flex justify-center mt-10 lg:mt-0"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-72 h-72 md:w-[400px] md:h-[400px] animate-float">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[400px] md:h-[400px] animate-float">
             {/* Glow rings */}
             <div className="absolute -inset-4 rounded-full opacity-30 animate-pulse-slow" style={{ background: 'conic-gradient(from 0deg, #22d3ee, #818cf8, #22d3ee)', filter: 'blur(20px)' }} />
             <div className="absolute -inset-2 rounded-[2.5rem] opacity-20" style={{ background: 'linear-gradient(135deg, #22d3ee, #818cf8)', filter: 'blur(10px)' }} />

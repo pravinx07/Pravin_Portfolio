@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import aboutImg from '../assets/about.png';
 
 const highlights = [
-  { label: 'B.Tech IT', sub: 'BATU Lonare' },
+  { label: 'B.Tech IT', sub: 'DBATU University' },
   { label: 'Full Stack', sub: '.NET + React' },
-  { label: 'Cloud', sub: 'Azure & AWS' },
+  { label: 'Databases', sub: 'PostgreSQL + EF Core' },
 ];
 
 const About = () => {
@@ -44,18 +44,12 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
 
-          <div className="space-y-5 text-lg leading-relaxed mb-8" style={{ color: '#8ba3bf' }}>
+          <div className="space-y-4 text-lg leading-relaxed mb-8" style={{ color: '#8ba3bf' }}>
             <p>
-              I'm a passionate Full Stack Developer who loves building real-world products that solve problems and create impact.
-              I enjoy working with modern technologies and delivering clean, efficient, and scalable solutions.
+              I am a detail-oriented Software Engineer specializing in building scalable web applications with <span style={{ color: '#e2e8f0', fontWeight: 500 }}>.NET, MERN Stack, and PostgreSQL</span>. I have a strong foundation in Object-Oriented Programming, MVC architecture, and complex problem-solving.
             </p>
             <p>
-              With a strong foundation in both frontend and backend development, I specialize in creating seamless user experiences
-              backed by robust server-side logic. My journey in tech is driven by a constant desire to learn and innovate.
-            </p>
-            <p>
-              Currently honing my skills as an <span style={{ color: '#22d3ee', fontWeight: 600 }}>Associate Software Engineer Intern at Willovate Pvt Ltd</span>,
-              contributing to projects involving .NET, React, and cloud infrastructure.
+              Currently working as an <span style={{ color: '#22d3ee', fontWeight: 600 }}>Associate Software Engineer at Willovate</span>, where I develop production-grade products like Willovate Resto and Studio, focusing on performance, clean code, and seamless user experiences.
             </p>
           </div>
 

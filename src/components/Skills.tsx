@@ -2,28 +2,40 @@ import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
+    title: "Languages",
+    icon: "💻",
+    color: '#f59e0b',
+    skills: ["C#", "JavaScript", "TypeScript", "Python"]
+  },
+  {
     title: "Frontend",
     icon: "🎨",
     color: '#22d3ee',
-    skills: ["HTML", "CSS", "JavaScript", "ReactJS", "NextJS", "TailwindCSS"]
+    skills: ["React.js", "Next.js", "HTML", "CSS", "Tailwind CSS"]
   },
   {
     title: "Backend",
     icon: "⚙️",
     color: '#818cf8',
-    skills: ["Node.js", "Express.js", ".NET Core", "RESTful APIs", "PostgreSQL"]
+    skills: [".NET", "ASP.NET Core", "Node.js", "Express.js", "REST APIs"]
+  },
+  {
+    title: "Databases & ORMs",
+    icon: "🗄️",
+    color: '#34d399',
+    skills: ["PostgreSQL", "MongoDB", "Prisma ORM", "Entity Framework Core"]
   },
   {
     title: "DevOps & Tools",
     icon: "🛠️",
-    color: '#34d399',
-    skills: ["Linux", "Docker", "Git", "GitHub Actions", "AWS", "Kubernetes", "CI/CD"]
+    color: '#f43f5e',
+    skills: ["Git","AWS","GitHub Actions","Shell Scripting","Docker", "Linux", "Azure", "CI/CD"]
   },
   {
-    title: "Languages",
-    icon: "💻",
-    color: '#f59e0b',
-    skills: ["JavaScript", "Java", "C#", "TypeScript", "Bash", "Python"]
+    title: "System Design & Arch",
+    icon: "🏗️",
+    color: '#a855f7',
+    skills: ["Microservices", "MVC Architecture", "Clean Architecture", "WebSockets", "Authentication", "OOP"]
   }
 ];
 
@@ -36,7 +48,7 @@ const Skills = () => {
         </p>
         <h2 className="section-title">Tech <span>Stack</span></h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={i}

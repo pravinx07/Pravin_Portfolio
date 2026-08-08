@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, CheckCircle2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -38,7 +38,7 @@ const Contact = () => {
   const contactItems = [
     { icon: Mail, label: 'Email', value: 'shegamwarp@gmail.com', href: 'mailto:shegamwarp@gmail.com' },
     { icon: Phone, label: 'Phone', value: '+91 70839 51137', href: 'tel:+917083951137' },
-    { icon: MapPin, label: 'Location', value: 'Nagpur, Maharashtra, India', href: '#' },
+    { icon: MapPin, label: 'Location', value: 'Nagpur, Maharashtra, India', href: 'https://maps.google.com/?q=Nagpur,+Maharashtra,+India' },
   ];
 
   return (
@@ -139,10 +139,11 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
+                    <label htmlFor="name" className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
                       Your Name
                     </label>
                     <input
+                      id="name"
                       type="text"
                       required
                       value={formData.name}
@@ -152,10 +153,11 @@ const Contact = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
+                    <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
                       Your Email
                     </label>
                     <input
+                      id="email"
                       type="email"
                       required
                       value={formData.email}
@@ -166,10 +168,11 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
+                  <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider" style={{ color: '#64748b' }}>
                     Message
                   </label>
                   <textarea
+                    id="message"
                     rows={5}
                     required
                     value={formData.message}
