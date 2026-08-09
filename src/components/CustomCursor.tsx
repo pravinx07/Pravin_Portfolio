@@ -4,13 +4,15 @@ import { motion } from 'framer-motion';
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !window.matchMedia('(max-width: 768px)').matches;
+    }
+    return true;
+  });
 
   useEffect(() => {
-    // Disable custom cursor on mobile devices
-    if (window.matchMedia("(max-width: 768px)").matches) return;
-    
-    setIsVisible(true);
+    if (!isVisible) return;
 
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
