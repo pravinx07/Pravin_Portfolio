@@ -3,15 +3,22 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import profileImg from '../assets/pravin.jpg';
 import resumePdf from '../assets/Pravin_Shegamwar_Resume.pdf';
 import { motion } from "framer-motion";
+import ParticleBackground from './ParticleBackground';
+import posthog from 'posthog-js';
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    posthog.capture('resume_downloaded', { location: 'Hero Section' });
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 scroll-mt-20" style={{ background: '#040d17' }}>
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-20 lg:pb-0 scroll-mt-20" style={{ background: '#040d17' }}>
+      <ParticleBackground />
       {/* Ambient glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20 pointer-events-none" style={{ background: '#22d3ee' }} />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[120px] opacity-15 pointer-events-none" style={{ background: '#818cf8' }} />
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-16 w-full">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] items-center gap-16 w-full relative z-10">
         <motion.div
           className="order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0"
           initial={{ opacity: 0, x: -50 }}
@@ -41,11 +48,13 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">
-            <a href={resumePdf} download="Pravin_Shegamwar_Resume.pdf" className="btn btn-primary w-full sm:w-auto justify-center">
-              <Download size={20} /> Download Resume
+            <a href={resumePdf} download="Pravin_Shegamwar_Resume.pdf" onClick={handleDownloadResume} className="btn btn-primary w-full sm:w-auto justify-center relative overflow-hidden group">
+              <span className="relative z-10 flex items-center gap-2"><Download size={20} /> Download Resume</span>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </a>
-            <a href="#contact" className="btn btn-outline w-full sm:w-auto justify-center">
-              Contact Me
+            <a href="#contact" className="btn btn-outline w-full sm:w-auto justify-center relative overflow-hidden group">
+              <span className="relative z-10">Contact Me</span>
+              <div className="absolute inset-0 bg-[#22d3ee]/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </a>
           </div>
 
@@ -104,7 +113,7 @@ const Hero = () => {
               <img
                 src={profileImg}
                 alt="Pravin Shegamwar"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-110"
               />
             </div>
           </div>

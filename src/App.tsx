@@ -9,6 +9,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 import GithubActivity from './components/GithubActivity';
+import TechMarquee from './components/TechMarquee';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <TechMarquee />
         <About />
         <GithubActivity />
         <Stats />
