@@ -1,4 +1,3 @@
-
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,14 +7,18 @@ import Projects from './components/Projects';
 import Stats from './components/Stats';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import CustomCursor from './components/CustomCursor';
+import GithubActivity from './components/GithubActivity';
 
 function App() {
   return (
-    <div className="min-h-screen" style={{ background: '#040d17' }}>
+    <div className="min-h-screen bg-[#040d17] text-[#e2e8f0] font-sans selection:bg-[#22d3ee] selection:text-[#040d17]">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
         <About />
+        <GithubActivity />
         <Stats />
         <Experience />
         <Projects />
