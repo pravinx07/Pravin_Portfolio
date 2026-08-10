@@ -44,7 +44,7 @@ const Hero = () => {
 
           <p className="text-lg max-w-xl mb-10 leading-relaxed" style={{ color: '#8ba3bf' }}>
             I build scalable web applications with modern technologies and DevOps practices.
-            Currently interning at <span style={{ color: '#22d3ee', fontWeight: 600 }}>Willovate Pvt Ltd</span>, specializing in .NET, React, and PostgreSQL.
+            Currently working at <span style={{ color: '#22d3ee', fontWeight: 600 }}>Willovate Pvt Ltd</span>, specializing in .NET, React, and PostgreSQL.
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">

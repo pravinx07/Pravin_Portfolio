@@ -5,9 +5,16 @@ const experiences = [
   {
     company: 'Willovate Private Limited',
     role: 'Associate Software Engineer',
-    period: 'Dec 2025 – Present',
-    description: 'Developed production-grade modules for Willovate Resto and independently built Willovate Studio (a WhatsApp marketing platform). Implemented real-time inventory, POS workflows, reservation systems, WhatsApp template workflows with Meta approval, and campaign analytics dashboards.',
+    period: 'June 2026 – Present',
+    description: 'Promoted to full-time role. Developing production-grade modules for Willovate Resto and independently building Willovate Studio (a WhatsApp marketing platform). Leading the implementation of scalable backend architecture and React-based user interfaces.',
     tags: ['.NET', 'React.js', 'PostgreSQL', 'MVC Architecture', 'REST APIs']
+  },
+  {
+    company: 'Willovate Private Limited',
+    role: 'Software Engineer Intern',
+    period: 'Dec 2025 – June 2026',
+    description: 'Implemented real-time inventory, POS workflows, reservation systems, WhatsApp template workflows with Meta approval, and campaign analytics dashboards.',
+    tags: ['.NET', 'React.js', 'PostgreSQL']
   },
   {
     company: 'Freelance & Open Source',
